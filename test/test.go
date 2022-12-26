@@ -2,6 +2,6 @@ package test
 
 import "fmt"
 
-func testlib(){
+func Testlib(){
 	fmt.Print("Test Lib")
 }
