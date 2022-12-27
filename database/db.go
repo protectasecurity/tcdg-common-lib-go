@@ -2,6 +2,6 @@ package database
 
 import "fmt"
 
-func connect(){
+func Connect(){
 	fmt.print("connectiion to")
 }
