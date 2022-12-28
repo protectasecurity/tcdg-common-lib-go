@@ -31,7 +31,11 @@ func MySecretManager(secretName string, region string) (map[string]interface{}, 
 	}
 
 	var dbparams map[string]interface{}
-	json.Unmarshal([]byte(*result.SecretString), &dbparams)
+	err = json.Unmarshal([]byte(*result.SecretString), &dbparams)
+	if err != nil {
+		log.Fatal(err.Error())
+		return nil, err
+	}
 
 	return dbparams, nil
 }
